@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BassForge</title>
+<style>
+body { font-family: system-ui, sans-serif; background: #111; color: #eee; margin: 20px; }
+button { padding: 10px 20px; margin: 5px; background: #333; color: white; border: none; cursor: pointer; }
+input, select { padding: 5px; margin: 5px; }
+#status { margin: 10px 0; }
+</style>
+</head>
+<body>
+<h1>BassForge</h1>
+<p>Bassline companion. Set your BPM and key, play, export WAV + MIDI that drop on the grid.</p>
+<div id="status">Tap to start audio</div>
+<label>BPM: <input id="bpm" type="number" min="60" max="180" value="92"></label>
+<label>Key: <select id="key"><option>C</option><option>C#</option><option>D</option><option>D#</option><option>E</option><option>F</option><option>F#</option><option>G</option><option>G#</option><option>A</option><option>A#</option><option>B</option></select></label>
+<label>Bars: <input id="bars" type="number" min="1" max="16" value="8"></label>
+<button id="play">Play</button>
+<button id="stop">Stop</button>
+<button id="export">Export WAV + MIDI</button>
+<div id="progress"></div>
+<script src="app.js"></script>
+</body>
+</html>
